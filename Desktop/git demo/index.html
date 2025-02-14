@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickup Confirmation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <h3 class="fw-bold">Pickup Confirmation</h3>
+        
+        <!-- Scrap Item Section -->
+        <div class="card p-3 mb-3">
+            <h5>Scrap Items <a href="#" class="text-success" data-bs-toggle="modal" data-bs-target="#scrapModal">Change</a></h5>
+            <p>Newspaper - <strong>₹14/kg</strong></p>
+        </div>
+
+        <!-- Address Section -->
+        <div class="card p-3 mb-3">
+            <h5>Address - Home <a href="#" class="text-success" data-bs-toggle="modal" data-bs-target="#addressModal">Change</a></h5>
+            <p>Kurla North, Mumbai</p>
+        </div>
+
+        <!-- Pickup Date Section -->
+        <div class="card p-3 mb-3">
+            <h5>Pickup Date <a href="#" class="text-success" data-bs-toggle="modal" data-bs-target="#dateModal">Change</a></h5>
+            <p>Tomorrow, 13 February 2025 (10 AM - 6 PM)</p>
+        </div>
+
+        <!-- Continue Button -->
+        <a href="nextPage.html" class="btn btn-success w-100 py-2">Continue</a>
+    </div>
+
+    <!-- Scrap Modal -->
+    <div class="modal fade" id="scrapModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Scrap Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="scrapType">Scrap Type:</label>
+                    <select class="form-control" id="scrapType">
+                        <option>Newspaper</option>
+                        <option>Plastic</option>
+                        <option>Metal</option>
+                    </select>
+                    <label for="scrapPrice" class="mt-2">Price per kg:</label>
+                    <input type="number" class="form-control" id="scrapPrice" value="14">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Modal -->
+    <div class="modal fade" id="addressModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="address">New Address:</label>
+                    <input type="text" class="form-control" id="address" value="Kurla North, Mumbai">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Date Modal -->
+    <div class="modal fade" id="dateModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change Pickup Date</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="pickupDate">Select Date:</label>
+                    <input type="date" class="form-control" id="pickupDate">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
